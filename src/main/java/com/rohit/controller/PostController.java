@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class postController {
+public class PostController {
 
     @RequestMapping(method = RequestMethod.GET,value = "/createPost")
     public String createPost(){
