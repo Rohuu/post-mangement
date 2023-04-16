@@ -5,10 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<h1>in home.html</h1>
-<form>
-    <input type="text" id="post" name="post"></input>
-    <button type="button" id="btn" name="btn">Post</button>
-</form>
+<h1>Post-Management page</h1>
+<p>Please choose from the below links to proceed:</p>
+<div>
+    <ul>
+        <p><a href="#" th:href="@{/createPost}">Create a new post</a></p>
+    </ul>
+</div>
 </body>
 </html>
