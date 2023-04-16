@@ -1,11 +1,13 @@
 package com.rohit.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
+@Table(name = "Posts")
 public class Post {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     int postId;
     String author;
     String content;
