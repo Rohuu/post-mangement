@@ -14,7 +14,9 @@ public class Student {
 
     @OneToOne
     private Laptop laptop;
-    // here student has a laptop but in laptop class  we have no student
+    // hibernate will make a foreign key of laptop in student table
+    // here student has a laptop but in laptop class we have no student
     // which means by student we can access laptop but by laptop we can't access student
     // this is called unidirectional mapping
+    // to make it bidirectional we have to inject student dependency to laptop as well
 }
