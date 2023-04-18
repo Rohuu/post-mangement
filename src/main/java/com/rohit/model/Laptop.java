@@ -1,10 +1,7 @@
 package com.rohit.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 
@@ -16,6 +13,8 @@ public class Laptop {
     private String brand;
 
     @OneToOne
+    // this student(foreign key) is a join column for laptop table which can be renamed too
+    @JoinColumn(name = "student_id")
     private Student student;
     // now this is @OneToOne mapping from both sides
     // now what hibernate does is, it makes foreign keys in both tables which is what we don't want
