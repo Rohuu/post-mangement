@@ -14,4 +14,7 @@ public class Student {
 
     @OneToOne
     private Laptop laptop;
+    // here student has a laptop but in laptop class  we have no student
+    // which means by student we can access laptop but by laptop we can't access student
+    // this is called unidirectional mapping
 }
