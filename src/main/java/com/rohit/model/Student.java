@@ -12,7 +12,9 @@ public class Student {
     private String studentName;
     private String about;
 
-    @OneToOne
+    @OneToOne(mappedBy = "student")
+    // this means that only make foreign key in database to manage student which is inside laptop
+    // so no foreign key table will be made in student
     private Laptop laptop;
     // hibernate will make a foreign key of laptop in student table
     // here student has a laptop but in laptop class we have no student
